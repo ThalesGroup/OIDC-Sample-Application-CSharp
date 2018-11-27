@@ -1,2 +1,23 @@
 # OIDC-Sample-Application
 This sample code will help customer's integrating their third party solution with Gemalto's Access management(STA) solution using OIDC protocol.
+
+# Prerequisites
+1. .NET Core SDK 2.1.
+2. A text editor or code editor of your choice.
+
+# Configuring the Application
+1. open appsettings.json in the text Editor
+2. Configure ClientId, ClientSecret, Authority
+3. Ex: 
+				"OIDCConfig": {
+						"ClientId": "XXXXXXXX",
+						"ClientSecret": "MySecret",
+						"Authority": "http://{hostname}/auth/realms/{RealmName}"
+					}
+
+# How To Run
+1. Navigate to ../OIDCSampleApplication\OIDCSampleApplication via cmd
+2. dotnet Build
+3. dotnet Run
+4. Application will Start running at some localhost port Ex: http://localhost:55074/
+5. Copy the Url and Open it in Browser to Authenticate
