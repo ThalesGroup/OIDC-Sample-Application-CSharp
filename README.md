@@ -21,3 +21,9 @@ This sample code will help customer's integrating their third party solution wit
 3. dotnet Run
 4. Application will Start running at some localhost port Ex: http://localhost:55074/
 5. Copy the Url and Open it in Browser to Authenticate
+
+# Alternate way to Run the App
+1. Install Visual Studio 2017
+2. Open OIDCSampleApplication.sln in the visual Studio
+3. Run the Application from Visual Studio by pressing F5 key
+4. Application will open in browser to Authenticate
