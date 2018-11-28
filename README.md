@@ -4,6 +4,7 @@ This sample code will help customer's integrating their third party solution wit
 # Prerequisites
 1. .NET Core SDK 2.1.
 2. A text editor or code editor of your choice.
+3. You already created a Application in your Identity Provider(IDP) and have ClientId, ClientSecret, Authority URL
 
 # Configuring the Application
 1. open ..\OIDCSampleApplication\OIDCSampleApplication\appsettings.json in the text Editor
