@@ -6,7 +6,7 @@ This sample code will help customer's integrating their third party solution wit
 2. A text editor or code editor of your choice.
 
 # Configuring the Application
-1. open appsettings.json in the text Editor
+1. open ..\OIDCSampleApplication\OIDCSampleApplication\appsettings.json in the text Editor
 2. Configure ClientId, ClientSecret, Authority
 3. Ex: 
 				"OIDCConfig": {
@@ -16,7 +16,7 @@ This sample code will help customer's integrating their third party solution wit
 					}
 
 # How To Run
-1. Navigate to ../OIDCSampleApplication\OIDCSampleApplication via cmd
+1. Navigate to ..\OIDCSampleApplication\OIDCSampleApplication via cmd
 2. dotnet Build
 3. dotnet Run
 4. Application will Start running at some localhost port Ex: http://localhost:55074/
