@@ -39,7 +39,7 @@ namespace OIDCAppSSO
                            options.Scope.Add("openid");
                            options.Scope.Add("profile");
                            options.SaveTokens = true;
-                           options.RequireHttpsMetadata = false;
+                           options.RequireHttpsMetadata = true;
                            options.ClientSecret = Configuration.GetSection("OIDCConfig").GetSection("ClientSecret").Value;
                            options.GetClaimsFromUserInfoEndpoint = true;
                        });
