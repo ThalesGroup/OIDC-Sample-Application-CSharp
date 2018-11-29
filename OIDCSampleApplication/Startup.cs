@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using OIDCSampleApplication.Utilities;
 
 namespace OIDCAppSSO
 {
@@ -19,28 +20,24 @@ namespace OIDCAppSSO
         {
             services.AddMvc();
 
-            string clientID = Configuration.GetSection("OIDCConfig").GetSection("ClientId").Value;
-            string clientSecret = Configuration.GetSection("OIDCConfig").GetSection("ClientSecret").Value;
-            string authority = Configuration.GetSection("OIDCConfig").GetSection("Authority").Value;
-
             services.AddAuthentication(options =>
                 {
-                    options.DefaultScheme = "Cookies";
-                    options.DefaultChallengeScheme = "oidc";
-                }).AddCookie("Cookies")
+                    options.DefaultScheme = Constants.Cookies;
+                    options.DefaultChallengeScheme = Constants.Oidc;
+                }).AddCookie(Constants.Cookies)
 
 
-                      .AddOpenIdConnect("oidc", options =>
+                      .AddOpenIdConnect(Constants.Oidc, options =>
                        {
-                           options.SignInScheme = "Cookies";
-                           options.Authority = Configuration.GetSection("OIDCConfig").GetSection("Authority").Value;
-                           options.ClientId = Configuration.GetSection("OIDCConfig").GetSection("ClientId").Value; ;
-                           options.ResponseType = "code id_token";
-                           options.Scope.Add("openid");
-                           options.Scope.Add("profile");
+                           options.SignInScheme = Constants.Cookies;
+                           options.Authority = Configuration.GetSection(Constants.OIDCConfig).GetSection(Constants.Authority).Value;
+                           options.ClientId = Configuration.GetSection(Constants.OIDCConfig).GetSection(Constants.ClientId).Value;
+                           options.ResponseType = Constants.ResponseType;
+                           options.Scope.Add(Constants.Openid);
+                           options.Scope.Add(Constants.Profile);
                            options.SaveTokens = true;
                            options.RequireHttpsMetadata = true;
-                           options.ClientSecret = Configuration.GetSection("OIDCConfig").GetSection("ClientSecret").Value;
+                           options.ClientSecret = Configuration.GetSection(Constants.OIDCConfig).GetSection(Constants.ClientSecret).Value;
                            options.GetClaimsFromUserInfoEndpoint = true;
                        });
         }
