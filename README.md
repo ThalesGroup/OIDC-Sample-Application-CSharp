@@ -13,8 +13,9 @@ This sample code will help customer's integrating their third party solution wit
 				"OIDCConfig": {
 						"ClientId": "XXXXXXXX",
 						"ClientSecret": "MySecret",
-						"Authority": "http://{hostname}/auth/realms/{RealmName}"
+						"Authority": "http://{IDP hostname}/auth/realms/{RealmName}"
 					}
+Ex: "Authority": "http://100.123.12.11/auth/realms/MyOIDCRealm"
 
 # How To Run
 1. Navigate to ..\OIDCSampleApplication\OIDCSampleApplication via cmd
