@@ -15,7 +15,7 @@ This sample code will help customer's integrating their third party solution wit
 						"ClientSecret": "MySecret",
 						"Authority": "http://{IDP hostname}/auth/realms/{RealmName}"
 					}
-Ex: "Authority": "http://100.123.12.11/auth/realms/MyOIDCRealm"
+4. Ex for "Authority": "http://100.123.12.11/auth/realms/MyOIDCRealm"
 
 # How To Run
 1. Navigate to ..\OIDCSampleApplication\OIDCSampleApplication via cmd
