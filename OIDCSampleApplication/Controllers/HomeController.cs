@@ -16,7 +16,7 @@ namespace OIDCAppSSO.Controllers
     {
         public IActionResult Index()
         {
-             LogTokenInformation();
+            LogTokenInformation();
             return View();
         }
 
