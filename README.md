@@ -29,3 +29,21 @@ This sample code will help customer's integrating their third party solution wit
 2. Open OIDCSampleApplication.sln in the visual Studio
 3. Run the Application from Visual Studio by pressing F5 key
 4. Application will open in browser to Authenticate
+
+# If Client is Public
+1. If your Client is public, do not change the Client Secret.
+2. ClientSecret will be ignored for public client
+
+# By Default Sample app is running for Authorization and Implicit flow.
+
+# Only Authorization Flow
+1. By Default Sample app is running for Authorization and Implicit flow.
+2. If you want the app to be running only in Authorization flow.
+3. Change the public const string ResponseType = "code id_token"; in Constants.cs
+4. it should be public const string ResponseType = "code";
+
+# Only Implicit Flow
+1. By Default Sample app is running for Authorization and Implicit flow.
+2. If you want the app to be running only in Implicit flow.
+3. Change the public const string ResponseType = "code id_token"; in Constants.cs
+4. it should be public const string ResponseType = "id_token";
