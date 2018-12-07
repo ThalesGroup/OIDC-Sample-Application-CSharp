@@ -32,7 +32,7 @@ namespace OIDCAppSSO
                            options.SignInScheme = Constants.Cookies;
                            options.Authority = Configuration.GetSection(Constants.OIDCConfig).GetSection(Constants.Authority).Value;
                            options.ClientId = Configuration.GetSection(Constants.OIDCConfig).GetSection(Constants.ClientId).Value;
-                           options.ResponseType = Constants.ResponseType;
+                           options.ResponseType = Configuration.GetSection(Constants.OIDCConfig).GetSection(Constants.ResponseType).Value;
                            options.Scope.Add(Constants.Openid);
                            options.Scope.Add(Constants.Profile);
                            options.SaveTokens = true;

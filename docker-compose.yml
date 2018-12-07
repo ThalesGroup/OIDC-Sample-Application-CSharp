@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  oidcsampleapplication:
+    image: oidcsampleapplication
+    build:
+      context: ./OIDCSampleApplication
+      dockerfile: Dockerfile
