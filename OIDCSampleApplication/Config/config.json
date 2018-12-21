@@ -1,0 +1,11 @@
+﻿{
+  "OIDCConfig": {
+    "ClientId": "{ClientID}",
+    "ClientSecret": "{ClientSecret}",
+    "Authority": "https://{IDP HostName}/auth/realms/{RealmName}",
+    //For Authorization Flow, ResponseType will be "code";
+    //For Implicit Flow, ResponseType will be "id_token";
+    //For Hybrid Flow, ResponseType will be "code id_token";
+    "ResponseType": "code id_token"
+  }
+}
