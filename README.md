@@ -47,3 +47,12 @@ This sample code will help customer's integrating their third party solution wit
 2. If you want the app to be running only in Implicit flow.
 3. Change the public const string ResponseType = "code id_token"; in Constants.cs
 4. it should be public const string ResponseType = "id_token";
+
+# Docker Support for The Sample Application
+1. Docker image on docker hub:  docker pull amagrawa/oidcsampleapplication
+2. Create container using Command: (Step 3)
+3. docker run -it -d --name oidc -p 5001:80 -v /opt/Config:/opt/target/Config amagrawa/oidcsampleapplication
+4. Mount the config.json with the Secret,ClientID, Authority and ResponseType in step 3.
+5.  Put you config.json with replaced value in your local folder on linux machine and this ( /opt/Config:/opt/target/Config) will mount the config.json to container.
+
+
