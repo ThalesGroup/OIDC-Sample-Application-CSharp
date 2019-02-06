@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using System;
+using System.Net;
 
 namespace OIDCAppSSO
 {
@@ -22,6 +23,13 @@ namespace OIDCAppSSO
                         BuildApplicationConfiguration(hostingContext.HostingEnvironment, configurationBuilder);
                 })
                 .UseStartup<Startup>()
+                .UseKestrel(options =>
+                {
+                    options.Listen(IPAddress.Any, 8080, listner =>
+                    {
+                        listner.UseConnectionLogging();
+                    });
+                })
                 .Build();
 
         public static IConfiguration BuildApplicationConfiguration(IHostingEnvironment hostingEnvironment,
