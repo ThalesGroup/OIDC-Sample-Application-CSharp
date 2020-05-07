@@ -7,7 +7,7 @@ This sample code will help customer's integrating their third party solution wit
 3. You already created a Application in your Identity Provider(IDP) and have ClientId, ClientSecret, Authority URL
 
 # Configuring the Application
-1. open ..\OIDCSampleApplication\OIDCSampleApplication\appsettings.json in the text Editor
+1. open ..\OIDCSampleApplication\OIDCSampleApplication\Config\config.json in the text Editor
 2. Configure ClientId, ClientSecret, Authority
 3. Ex: 
 				"OIDCConfig": {
