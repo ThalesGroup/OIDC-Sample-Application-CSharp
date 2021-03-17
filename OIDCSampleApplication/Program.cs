@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Net;
+using Microsoft.Extensions.Hosting;
 
 namespace OIDCAppSSO
 {
@@ -32,7 +33,7 @@ namespace OIDCAppSSO
                 })
                 .Build();
 
-        public static IConfiguration BuildApplicationConfiguration(IHostingEnvironment hostingEnvironment,
+        public static IConfiguration BuildApplicationConfiguration(IWebHostEnvironment hostingEnvironment,
             IConfigurationBuilder configurationBuilder)
         {
             if (configurationBuilder == null)
