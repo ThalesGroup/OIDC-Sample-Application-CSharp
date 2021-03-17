@@ -2,7 +2,7 @@
 This sample code will help customer's integrating their third party solution with Gemalto's Access management(STA) solution using OIDC protocol.
 
 # Prerequisites
-1. .NET Core SDK 2.1.
+1. .NET Core SDK 3.1.
 2. A text editor or code editor of your choice.
 3. You already created a Application in your Identity Provider(IDP) and have ClientId, ClientSecret, Authority URL
 
