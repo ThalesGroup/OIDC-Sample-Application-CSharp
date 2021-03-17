@@ -37,6 +37,7 @@ namespace OIDCAppSSO
                       options.RequireHttpsMetadata = true;
                       options.ClientSecret = Configuration.GetSection(Constants.OIDCConfig).GetSection(Constants.ClientSecret).Value;
                       options.GetClaimsFromUserInfoEndpoint = true;
+                      options.UsePkce = false;
                   });
         }
 
